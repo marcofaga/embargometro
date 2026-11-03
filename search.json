@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "edicoes.html",
+    "href": "edicoes.html",
+    "title": "Edições anteriores",
+    "section": "",
+    "text": "Esta é a primeira edição (novembro de 2026). As edições mensais ficarão arquivadas aqui."
+  },
+  {
+    "objectID": "municipios.html",
+    "href": "municipios.html",
+    "title": "Municípios",
+    "section": "",
+    "text": "Alertas de corte raso de 2019 a 2023 somados, por município. % Ibama em 2 anos é a parte da área dos alertas com embargo do Ibama registrado em até dois anos. % todas as fontes inclui o ICMBio e o órgão estadual, nos anos que cada lista cobre. No Pará, sai como faixa porque a lista estadual tem só o ano do embargo. Municípios com menos de 1 mil hectares de alertas no período aparecem em cinza: a porcentagem oscila muito.\n\n\n\n\n\n\nBaixe a tabela: municipios.csv. Fonte: Inpe (Deter), Ibama, ICMBio e órgãos estaduais; cálculo do observatório."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Embargômetro",
+    "section": "",
+    "text": "O satélite do Inpe detecta o desmatamento em dias. O embargo, que proíbe o uso da área desmatada ilegalmente, vem depois, quando vem. Em 2023, o Ibama embargou 17,1% da área dos alertas de corte raso em até dois anos, abaixo dos 29,4% de 2022, o maior valor da série. 2023 é o ano mais recente com o prazo de dois anos encerrado.\n\n\n\n17,1%\n\n\nda área desmatada em 2023 embargada pelo Ibama em até 2 anos\n\n\n29,4% em 2022\n\n\n\n\n7,6%\n\n\nda área dos alertas de dezembro 2025 embargada em até 6 meses\n\n\no mês mais recente com 6 meses de prazo\n\n\n\n\n5,4%\n\n\ndo desmatamento de 2023 ocorreu em área que o Ibama já tinha embargado\n\n\no “embargo no papel”\n\n\n\n\n5,0%\n\n\nda área de alertas de mineração em 2023 embargada pelo Ibama em até 2 anos\n\n\ngarimpo quase não é embargado\n\n\n\n\n\n\n\nPorcentagem da área dos alertas de corte raso com embargo do Ibama registrado em até dois anos depois do alerta.\n\n\n\n\n\n\n* 2016 é parcial: a série do Deter começa em agosto de 2016. Os alertas de 2024 em diante ainda não completaram dois anos.\n\n\n\nO prazo de dois anos demora a fechar. Para acompanhar os alertas recentes, o observatório mede também quanto foi embargado em até seis meses.\n\n\n\n\n\n\n\n\n\n\n\n\nO último ponto é dezembro 2025, o mês mais recente com seis meses de prazo encerrados e registrados nas bases públicas.\n\n\n\nIbama, em até dois anos, % da área dos alertas de corte raso. A tabela está em ordem alfabética. Ela não serve para ordenar os estados: em alguns deles, os órgãos estaduais embargam mais que o Ibama. No Mato Grosso, por exemplo, o estado usa o auto de infração no lugar do embargo fora de áreas de preservação. A página de metodologia explica as fontes estaduais.\n\n\n\n\n\n\n\n\nUF\n2017\n2018\n2019\n2020\n2021\n2022\n2023\n\n\n\n\nAC\n4,4\n4,9\n3,5\n3,9\n11,0\n15,5\n15,8\n\n\nAM\n42,9\n28,7\n28,5\n22,6\n43,0\n51,0\n31,8\n\n\nAP †\n1,5\n4,2\n2,5\n10,8\n26,5\n58,0\n1,1\n\n\nMA\n8,5\n6,6\n1,2\n6,4\n0,3\n9,6\n11,1\n\n\nMT\n17,4\n19,7\n10,6\n5,6\n8,9\n8,5\n9,4\n\n\nPA\n12,8\n20,6\n15,0\n22,0\n26,8\n29,2\n14,6\n\n\nRO\n8,6\n9,8\n8,0\n7,6\n16,4\n29,8\n25,5\n\n\nRR\n3,5\n3,8\n5,2\n4,3\n14,0\n18,3\n16,3\n\n\nTO †\n0,5\n0,0\n0,0\n0,0\n0,5\n0,0\n0,0\n\n\n\n† Base pequena na maior parte dos anos (menos de 50 alertas ou de 1 mil ha). Fonte: Inpe (Deter) e Ibama; cálculo do observatório.\n\n\n\n\n\n\n\n\n\n\n\nNos alertas de mineração do Deter, categoria que inclui o garimpo, a resposta do Ibama em até dois anos ficou entre 0,0% e 5,0% da área de 2016 a 2023. O valor mais alto, de 2023, vem quase todo de um único embargo sobre o garimpo na Terra Indígena Yanomami, em Roraima.\n\n\n\n\n\nLinha preta grossa: um dos alertas, de 30/03/2020. Linhas finas: os outros alertas do Deter dentro do embargo. Tracejado branco: embargo do Ibama de 24/06/2020. Fontes: Inpe (Deter, TerraClass), Ibama (termos de embargo), Sentinel-2 cloudless 2019 e 2024, de EOX IT Services GmbH (contém dados Copernicus Sentinel modificados).\n\n\n\nAntes. Em 2018, a área do retângulo, em Novo Progresso (PA), era floresta (99,7%, segundo o TerraClass).\nO alerta. Entre fevereiro e março de 2020, o Deter emitiu 13 alertas de corte raso ali, somando cerca de 1,7 mil hectares.\nO embargo. Em junho de 2020, o Ibama embargou 1.793 hectares, cobrindo todos os alertas, 86 dias depois do último.\nDepois. Em 2022 e em 2024, 99,8% da área embargada era pasto. O embargo continua em vigor na lista do Ibama.\nA multa. O Ibama não publica se as multas foram pagas. O observatório pediu esse dado pela Lei de Acesso à Informação.\n\n\nO caso foi escolhido por uma regra fixa, antes de olhar o mapa: um alerta típico em tamanho e no prazo até o embargo. O embargo, de quase 1,8 mil hectares, é bem maior que a média. O exemplo ilustra o caminho, e os números do observatório vêm de todos os alertas.\n\nComo ler. O observatório cruza no mapa os alertas de desmatamento do Inpe (Deter) com os polígonos de embargo do Ibama, do ICMBio e de cinco estados. Não afirma causa: mostra o que dizem os registros oficiais. Um alerta sem embargo pode ter recebido outra sanção, ou um embargo que não está nas listas públicas. Detalhes em Metodologia e dados."
+  },
+  {
+    "objectID": "index.html#a-resposta-do-ibama-ano-a-ano",
+    "href": "index.html#a-resposta-do-ibama-ano-a-ano",
+    "title": "Embargômetro",
+    "section": "",
+    "text": "Porcentagem da área dos alertas de corte raso com embargo do Ibama registrado em até dois anos depois do alerta.\n\n\n\n\n\n\n* 2016 é parcial: a série do Deter começa em agosto de 2016. Os alertas de 2024 em diante ainda não completaram dois anos."
+  },
+  {
+    "objectID": "index.html#os-meses-mais-recentes",
+    "href": "index.html#os-meses-mais-recentes",
+    "title": "Embargômetro",
+    "section": "",
+    "text": "O prazo de dois anos demora a fechar. Para acompanhar os alertas recentes, o observatório mede também quanto foi embargado em até seis meses.\n\n\n\n\n\n\n\n\n\n\n\n\nO último ponto é dezembro 2025, o mês mais recente com seis meses de prazo encerrados e registrados nas bases públicas."
+  },
+  {
+    "objectID": "index.html#por-estado",
+    "href": "index.html#por-estado",
+    "title": "Embargômetro",
+    "section": "",
+    "text": "Ibama, em até dois anos, % da área dos alertas de corte raso. A tabela está em ordem alfabética. Ela não serve para ordenar os estados: em alguns deles, os órgãos estaduais embargam mais que o Ibama. No Mato Grosso, por exemplo, o estado usa o auto de infração no lugar do embargo fora de áreas de preservação. A página de metodologia explica as fontes estaduais.\n\n\n\n\n\n\n\n\nUF\n2017\n2018\n2019\n2020\n2021\n2022\n2023\n\n\n\n\nAC\n4,4\n4,9\n3,5\n3,9\n11,0\n15,5\n15,8\n\n\nAM\n42,9\n28,7\n28,5\n22,6\n43,0\n51,0\n31,8\n\n\nAP †\n1,5\n4,2\n2,5\n10,8\n26,5\n58,0\n1,1\n\n\nMA\n8,5\n6,6\n1,2\n6,4\n0,3\n9,6\n11,1\n\n\nMT\n17,4\n19,7\n10,6\n5,6\n8,9\n8,5\n9,4\n\n\nPA\n12,8\n20,6\n15,0\n22,0\n26,8\n29,2\n14,6\n\n\nRO\n8,6\n9,8\n8,0\n7,6\n16,4\n29,8\n25,5\n\n\nRR\n3,5\n3,8\n5,2\n4,3\n14,0\n18,3\n16,3\n\n\nTO †\n0,5\n0,0\n0,0\n0,0\n0,5\n0,0\n0,0\n\n\n\n† Base pequena na maior parte dos anos (menos de 50 alertas ou de 1 mil ha). Fonte: Inpe (Deter) e Ibama; cálculo do observatório."
+  },
+  {
+    "objectID": "index.html#garimpo",
+    "href": "index.html#garimpo",
+    "title": "Embargômetro",
+    "section": "",
+    "text": "Nos alertas de mineração do Deter, categoria que inclui o garimpo, a resposta do Ibama em até dois anos ficou entre 0,0% e 5,0% da área de 2016 a 2023. O valor mais alto, de 2023, vem quase todo de um único embargo sobre o garimpo na Terra Indígena Yanomami, em Roraima."
+  },
+  {
+    "objectID": "index.html#um-exemplo-de-floresta-a-pasto-embargado",
+    "href": "index.html#um-exemplo-de-floresta-a-pasto-embargado",
+    "title": "Embargômetro",
+    "section": "",
+    "text": "Linha preta grossa: um dos alertas, de 30/03/2020. Linhas finas: os outros alertas do Deter dentro do embargo. Tracejado branco: embargo do Ibama de 24/06/2020. Fontes: Inpe (Deter, TerraClass), Ibama (termos de embargo), Sentinel-2 cloudless 2019 e 2024, de EOX IT Services GmbH (contém dados Copernicus Sentinel modificados).\n\n\n\nAntes. Em 2018, a área do retângulo, em Novo Progresso (PA), era floresta (99,7%, segundo o TerraClass).\nO alerta. Entre fevereiro e março de 2020, o Deter emitiu 13 alertas de corte raso ali, somando cerca de 1,7 mil hectares.\nO embargo. Em junho de 2020, o Ibama embargou 1.793 hectares, cobrindo todos os alertas, 86 dias depois do último.\nDepois. Em 2022 e em 2024, 99,8% da área embargada era pasto. O embargo continua em vigor na lista do Ibama.\nA multa. O Ibama não publica se as multas foram pagas. O observatório pediu esse dado pela Lei de Acesso à Informação.\n\n\nO caso foi escolhido por uma regra fixa, antes de olhar o mapa: um alerta típico em tamanho e no prazo até o embargo. O embargo, de quase 1,8 mil hectares, é bem maior que a média. O exemplo ilustra o caminho, e os números do observatório vêm de todos os alertas.\n\nComo ler. O observatório cruza no mapa os alertas de desmatamento do Inpe (Deter) com os polígonos de embargo do Ibama, do ICMBio e de cinco estados. Não afirma causa: mostra o que dizem os registros oficiais. Um alerta sem embargo pode ter recebido outra sanção, ou um embargo que não está nas listas públicas. Detalhes em Metodologia e dados."
+  },
+  {
+    "objectID": "metodologia.html",
+    "href": "metodologia.html",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "",
+    "text": "amazonia_por_ano.csv: série anual da Amazônia Legal (corte raso).\namazonia_por_mes.csv: série mensal; as porcentagens ficam em branco enquanto o prazo não fecha.\nmunicipios.csv: tabela por município.\n\nAs tabelas trazem só números agregados. O observatório não publica nome, CPF, CNPJ ou número de processo, embora as listas públicas de embargo tragam esses dados."
+  },
+  {
+    "objectID": "metodologia.html#dados-para-baixar",
+    "href": "metodologia.html#dados-para-baixar",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "",
+    "text": "amazonia_por_ano.csv: série anual da Amazônia Legal (corte raso).\namazonia_por_mes.csv: série mensal; as porcentagens ficam em branco enquanto o prazo não fecha.\nmunicipios.csv: tabela por município.\n\nAs tabelas trazem só números agregados. O observatório não publica nome, CPF, CNPJ ou número de processo, embora as listas públicas de embargo tragam esses dados."
+  },
+  {
+    "objectID": "metodologia.html#o-que-o-observatório-mede",
+    "href": "metodologia.html#o-que-o-observatório-mede",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "O que o observatório mede",
+    "text": "O que o observatório mede\nO satélite detecta o desmatamento na Amazônia quase todo dia. O observatório acompanha o que acontece depois: se a área desmatada recebe um embargo, e em quanto tempo.\nO embargo proíbe o uso de uma área desmatada ilegalmente. Quem embarga é o Ibama, o ICMBio (dentro das unidades de conservação federais) ou o órgão ambiental do estado.\nTudo vem de dados públicos e abertos. Os números saem por município, por estado e por mês."
+  },
+  {
+    "objectID": "metodologia.html#de-onde-vêm-os-dados",
+    "href": "metodologia.html#de-onde-vêm-os-dados",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "De onde vêm os dados",
+    "text": "De onde vêm os dados\nOs alertas de desmatamento vêm do Deter, o sistema de alertas do Instituto Nacional de Pesquisas Espaciais (Inpe). Usamos dois tipos de alerta: o de corte raso (retirada total da vegetação) e o de mineração. Os resultados saem separados para cada tipo. O período vai de agosto de 2016, quando começa a série pública do Deter, a outubro de 2026, nos nove estados da Amazônia Legal. São cerca de 292 mil alertas.\nO Deter tem três limites que o leitor precisa conhecer:\n\nSó floresta. O Deter cobre a floresta dentro da Amazônia Legal. O desmatamento de cerrado e de campos naturais fica de fora.\nSó alertas a partir de 6,25 hectares. A versão pública do Deter não traz desmatamentos menores que isso.\nSó a data da imagem. O alerta tem a data da imagem de satélite que mostrou o desmatamento, não a do dia em que a árvore caiu.\n\nOs embargos vêm de sete fontes:\n\n\n\n\n\n\n\n\nÓrgão\nO que publica\nData do embargo\n\n\n\n\nIbama\nTodos os embargos do país, inclusive os cancelados e os já retirados\nDia exato\n\n\nICMBio\nEmbargos em unidades de conservação federais\nDia exato, mas o órgão não diz se é a data da fiscalização ou a do registro\n\n\nPará (Semas)\nLista de Desmatamento Ilegal (LDI), só com os embargos em vigor\nSó o ano\n\n\nMato Grosso (Sema)\nEmbargos (sistema antigo até setembro de 2022; sistema novo desde outubro de 2022) e autos de infração\nDia exato\n\n\nAcre (Imac)\nEmbargos em vigor desde 2023\nDia exato\n\n\nAmazonas (Ipaam)\nEmbargos\nDia exato\n\n\nRondônia (Sedam)\nEmbargos em vigor\nDia da ação de fiscalização\n\n\n\nAmapá, Maranhão, Roraima e Tocantins não publicam a localização das áreas com embargo estadual. Nesses estados, só aparecem os embargos federais.\nGuardamos a documentação de cada fonte: as normas que regem cada lista e o significado de cada coluna. Ela fica à disposição de quem quiser conferir."
+  },
+  {
+    "objectID": "metodologia.html#como-ligamos-o-alerta-ao-embargo",
+    "href": "metodologia.html#como-ligamos-o-alerta-ao-embargo",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "Como ligamos o alerta ao embargo",
+    "text": "Como ligamos o alerta ao embargo\nOs registros de embargo quase nunca dizem a qual alerta correspondem. Por isso, comparamos no mapa o desenho de cada alerta com o desenho de cada área embargada.\nMedimos quantos hectares de cada alerta ficaram dentro de uma área que recebeu embargo depois do alerta. Chamamos essa área de área embargada após o alerta. Se dois embargos cobrem o mesmo pedaço de um alerta, esse pedaço conta uma vez.\nCalculamos os indicadores para três prazos depois do alerta: 6 meses, 1 ano e 2 anos. As explicações a seguir usam o prazo de 2 anos, o principal."
+  },
+  {
+    "objectID": "metodologia.html#os-indicadores",
+    "href": "metodologia.html#os-indicadores",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "Os indicadores",
+    "text": "Os indicadores\nÁrea embargada em até 2 anos. É a porcentagem da área dos alertas coberta por embargos registrados nos 2 anos seguintes a cada alerta. Calculamos em separado para o Ibama, para os órgãos federais juntos (Ibama e ICMBio), para o órgão do estado e para todos juntos.\nAlertas com embargo do Ibama, com ou sem desenho. Parte dos embargos do Ibama tem só um ponto no mapa, sem o desenho da área. Este indicador conta a porcentagem de alertas que receberam, em até 2 anos, um embargo do Ibama com desenho sobre o alerta ou com o ponto dentro dele.\nÁrea já embargada. É a parte da área dos alertas que já estava dentro de um embargo do Ibama em vigor no dia do alerta. Contamos só os embargos registrados pelo menos 30 dias antes. É o desmatamento numa área cujo uso já estava proibido.\n\nUsamos só o Ibama porque é o único órgão que publica a data em que cada embargo foi retirado. Sem essa data, não dá para saber se o embargo estava em vigor no dia do alerta.\nA folga de 30 dias evita contar como anterior um embargo que pode ser a resposta a uma detecção anterior do mesmo desmatamento. Sem a folga, o resultado sobe 0,2 ponto percentual no caso típico e até 4 pontos no Amazonas.\n\nÁrea embargada após o alerta, descontados os embargos anteriores. É a área embargada em até 2 anos, descontada a parte que já estava dentro de um embargo registrado antes do alerta, de qualquer órgão. No caso do Ibama, só conta o embargo anterior ainda em vigor no dia do alerta.\nAutos de infração no Mato Grosso. O auto de infração registra a infração e aplica a multa, mas sozinho não proíbe o uso da área. Este indicador é a parte da área dos alertas que recebeu um auto de infração do estado em até 2 anos. Fica separado dos embargos porque é outra medida.\nÁrea embargada no Pará: mínimo e máximo. A lista estadual do Pará informa só o ano do embargo. Quando o embargo é do mesmo ano do alerta, não dá para saber qual veio primeiro. O mínimo conta só os embargos dos anos seguintes ao do alerta. O máximo inclui também os embargos do mesmo ano. Essa faixa reflete a falta da data exata, não uma margem de erro."
+  },
+  {
+    "objectID": "metodologia.html#quando-um-ano-entra-na-conta",
+    "href": "metodologia.html#quando-um-ano-entra-na-conta",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "Quando um ano entra na conta",
+    "text": "Quando um ano entra na conta\nOs alertas de um ano só entram na conta quando todas as fontes usadas cobrem esse ano inteiro e também o prazo de acompanhamento seguinte. Nos dados atuais:\n\n2016 é um ano parcial: tem só os alertas de agosto a dezembro, porque a série do Deter começa em agosto de 2016. O ano aparece nas tabelas, marcado como parcial. A área de alertas de 2016 não deve ser comparada com a dos outros anos. As porcentagens podem ser comparadas, com a ressalva de que cobrem só cinco meses e podem não representar o ano inteiro.\nPrazo de 2 anos: os números vão até os alertas de 2023. Os dados disponíveis ainda não permitem acompanhar todos os alertas de 2024 por 2 anos.\nFontes estaduais: cada uma entra só nos anos que cobre por completo. A lista do Acre, por exemplo, começa em 2023. A do Amazonas entra até 2022, porque o órgão leva de 1 a 3 anos para registrar um embargo no sistema público.\n\nQuando a fonte não cobre o ano, o resultado fica em branco, e não em zero."
+  },
+  {
+    "objectID": "metodologia.html#o-que-os-números-não-dizem",
+    "href": "metodologia.html#o-que-os-números-não-dizem",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "O que os números não dizem",
+    "text": "O que os números não dizem\n\nOs números não provam causa. A sobreposição mostra que a área recebeu um embargo depois do alerta. Ela não prova que o embargo foi motivado por aquele alerta.\nOs números não servem para ordenar os estados. As informações estaduais variam muito: algumas listas trazem só os embargos em vigor, outras informam só o ano, e quatro estados não publicam a localização das áreas embargadas. Para comparar estados, o indicador mais justo é o do Ibama, que registra os embargos da mesma forma em toda a Amazônia.\nO registro do Ibama mudou em 2024. Até 2023, entre um terço e metade dos embargos do Ibama tinha só um ponto no mapa, sem o desenho da área. Desde 2024, quase todos (88% a 93%) têm o desenho. Como comparamos os desenhos, parte do aumento da área embargada nos anos recentes pode vir de registros mais completos, e não de mais fiscalização. O indicador de alertas com embargo do Ibama, com ou sem desenho, ajuda a separar os dois efeitos.\nO Mato Grosso usa mais o auto de infração. Um decreto estadual de 2022 (Decreto 1.436) restringe o embargo quando o desmatamento ocorre fora das áreas que a lei manda preservar dentro da propriedade (Área de Preservação Permanente e Reserva Legal). Nesses casos, o estado muitas vezes aplica só o auto de infração. Uma porcentagem baixa de área embargada no estado não quer dizer falta de fiscalização.\nNo Tocantins, a área embargada zero não quer dizer falta de fiscalização. Os alertas no estado cobrem menos de mil hectares de floresta amazônica por ano, e o estado não publica a localização dos seus embargos. Com tão pouca área, basta não haver embargo federal sobre ela para o resultado ser zero.\nCom poucos alertas, um único embargo decide o resultado. É o caso do Amapá, do Tocantins e da mineração na maior parte dos estados. Em Roraima, por exemplo, um só embargo do Ibama, sobre o garimpo na Terra Indígena Yanomami em 2023, responde por toda a área de mineração embargada naquele ano. Marcamos como base pequena os estados e anos com menos de 50 alertas ou menos de mil hectares de alertas.\nA área dos alertas não é a área desmatada. Dois alertas, em datas diferentes, podem cobrir o mesmo terreno. Por isso, a soma das áreas dos alertas serve só como base para as porcentagens, e não como total desmatado no ano. O número oficial do desmatamento anual é o do Prodes, outro sistema do Inpe.\nListas só com embargos em vigor deixam de fora os embargos já retirados. É o caso do Pará, do Acre e de Rondônia. No Acre, comparando versões da lista publicadas ao longo de oito meses, a perda é pequena: de zero a três embargos por ano. No Pará e em Rondônia, não é possível medir."
+  },
+  {
+    "objectID": "metodologia.html#atualização",
+    "href": "metodologia.html#atualização",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "Atualização",
+    "text": "Atualização\nOs alertas e os embargos federais são atualizados toda semana nas fontes. As listas estaduais mudam em ritmos diferentes. O observatório refaz as contas a cada mês."
+  },
+  {
+    "objectID": "metodologia.html#contato",
+    "href": "metodologia.html#contato",
+    "title": "Do alerta ao embargo: nota metodológica",
+    "section": "Contato",
+    "text": "Contato\nMAF dataScience · Marco Antonio Faganello · marcofaga@gmail.com"
+  }
+]

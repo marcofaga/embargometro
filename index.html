@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Quanto do desmatamento detectado por satélite na Amazônia Legal recebe embargo, em quanto tempo e onde.">
+
+<title>Do alerta ao embargo na Amazônia – Embargômetro</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-36ab07df65d306acf1d2a5f425d9f023.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<!-- Fora dos buscadores até a rodada com especialistas (decisão de 03/11/2026). Retirar no lançamento. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;3a98e32c29c140e9af32b290ad198d75&quot;}"></script>
+<!-- End Cloudflare Web Analytics -->
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/plotly-binding-4.12.1/plotly.js"></script>
+
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Do alerta ao embargo na Amazônia">
+<meta property="og:description" content="Quanto do desmatamento detectado por satélite na Amazônia Legal recebe embargo, em quanto tempo e onde.">
+<meta property="og:image" content="https://marcofaga.github.io/embargometro/images/caso_mapas.png">
+<meta property="og:site_name" content="Embargômetro">
+<meta property="og:image:alt" content="Mapas de uma área em Novo Progresso (PA): floresta em 2018 e 2019, pasto em 2022 e 2024, com o contorno dos alertas e do embargo.">
+<meta property="og:image:height" content="1639">
+<meta property="og:image:width" content="1639">
+<meta name="twitter:title" content="Do alerta ao embargo na Amazônia">
+<meta name="twitter:description" content="Quanto do desmatamento detectado por satélite na Amazônia Legal recebe embargo, em quanto tempo e onde.">
+<meta name="twitter:image" content="https://marcofaga.github.io/embargometro/images/caso_mapas.png">
+<meta name="twitter:image:alt" content="Mapas de uma área em Novo Progresso (PA): floresta em 2018 e 2019, pasto em 2022 e 2024, com o contorno dos alertas e do embargo.">
+<meta name="twitter:image-height" content="1639">
+<meta name="twitter:image-width" content="1639">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Embargômetro</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Edição do mês</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./municipios.html"> 
+<span class="menu-text">Municípios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./metodologia.html"> 
+<span class="menu-text">Metodologia e dados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./edicoes.html"> 
+<span class="menu-text">Edições anteriores</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:mafdatascience@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="Contato">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="embargômetro" class="level1 pagina-titulo">
+<h1 class="pagina-titulo">Embargômetro</h1>
+<section id="do-alerta-ao-embargo-a-resposta-do-poder-público-ao-desmatamento-na-amazônia-legal-edição-de-novembro-de-2026-alertas-até-outubro-2026" class="level3 pagina-subtitulo">
+<h3 class="pagina-subtitulo anchored" data-anchor-id="do-alerta-ao-embargo-a-resposta-do-poder-público-ao-desmatamento-na-amazônia-legal-edição-de-novembro-de-2026-alertas-até-outubro-2026">Do alerta ao embargo: a resposta do poder público ao desmatamento na Amazônia Legal<br>edição de novembro de 2026 · alertas até outubro 2026</h3>
+<section id="de-cada-100-hectares-desmatados-na-amazônia-em-2023-o-ibama-embargou-17-em-até-dois-anos" class="level4 manchete">
+<h4 class="manchete anchored" data-anchor-id="de-cada-100-hectares-desmatados-na-amazônia-em-2023-o-ibama-embargou-17-em-até-dois-anos">De cada 100 hectares desmatados na Amazônia em 2023, o Ibama embargou 17 em até dois anos</h4>
+<p>O satélite do Inpe detecta o desmatamento em dias. O embargo, que proíbe o uso da área desmatada ilegalmente, vem depois, quando vem. Em 2023, o Ibama embargou 17,1% da área dos alertas de corte raso em até dois anos, abaixo dos 29,4% de 2022, o maior valor da série. 2023 é o ano mais recente com o prazo de dois anos encerrado.</p>
+<div class="kpi-grid">
+<div class="kpi-card">
+<div class="kpi-valor">
+17,1%
+</div>
+<div class="kpi-rotulo">
+da área desmatada em 2023 embargada pelo Ibama em até 2 anos
+</div>
+<div class="kpi-variacao neutra">
+29,4% em 2022
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-valor">
+7,6%
+</div>
+<div class="kpi-rotulo">
+da área dos alertas de dezembro 2025 embargada em até 6 meses
+</div>
+<div class="kpi-variacao neutra">
+o mês mais recente com 6 meses de prazo
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-valor">
+5,4%
+</div>
+<div class="kpi-rotulo">
+do desmatamento de 2023 ocorreu em área que o Ibama já tinha embargado
+</div>
+<div class="kpi-variacao neutra">
+o “embargo no papel”
+</div>
+</div>
+<div class="kpi-card">
+<div class="kpi-valor">
+5,0%
+</div>
+<div class="kpi-rotulo">
+da área de alertas de mineração em 2023 embargada pelo Ibama em até 2 anos
+</div>
+<div class="kpi-variacao neutra">
+garimpo quase não é embargado
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="a-resposta-do-ibama-ano-a-ano" class="level2">
+<h2 class="anchored" data-anchor-id="a-resposta-do-ibama-ano-a-ano">A resposta do Ibama, ano a ano</h2>
+<p>Porcentagem da área dos alertas de corte raso com embargo do Ibama registrado em até dois anos depois do alerta.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-cc3c2cb1d28671186ffb" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-cc3c2cb1d28671186ffb">{"x":{"visdat":{"71a41c866912":["function () ","plotlyVisDat"]},"cur_data":"71a41c866912","attrs":{"71a41c866912":{"x":{},"y":{},"marker":{"color":{}},"text":{},"textposition":"outside","cliponaxis":false,"hovertext":{},"hoverinfo":"text","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":20,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"","type":"category","categoryorder":"array","categoryarray":["2016*","2017","2018","2019","2020","2021","2022","2023"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"% da área dos alertas","rangemode":"tozero","ticksuffix":"%"},"showlegend":false,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"x":["2016*","2017","2018","2019","2020","2021","2022","2023"],"y":[13.3264005602241,17.560102156640198,18.267794537301299,14.024800175188901,15.032239197899299,24.9166095051445,29.4434246309246,17.082517207473],"marker":{"color":["#9a9a9a","#1F7A4A","#1F7A4A","#1F7A4A","#1F7A4A","#1F7A4A","#1F7A4A","#1F7A4A"],"line":{"color":"rgba(31,119,180,1)"}},"text":["13,3%","17,6%","18,3%","14,0%","15,0%","24,9%","29,4%","17,1%"],"textposition":["outside","outside","outside","outside","outside","outside","outside","outside"],"cliponaxis":false,"hovertext":["2016*: 13,3% de 285,6 mil ha de alertas","2017: 17,6% de 352,4 mil ha de alertas","2018: 18,3% de 490,5 mil ha de alertas","2019: 14,0% de 913,3 mil ha de alertas","2020: 15,0% de 837,8 mil ha de alertas","2021: 24,9% de 816,4 mil ha de alertas","2022: 29,4% de 1.029,7 mil ha de alertas","2023: 17,1% de 508,6 mil ha de alertas"],"hoverinfo":["text","text","text","text","text","text","text","text"],"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>* 2016 é parcial: a série do Deter começa em agosto de 2016. Os alertas de 2024 em diante ainda não completaram dois anos.</p>
+</section>
+<section id="os-meses-mais-recentes" class="level2">
+<h2 class="anchored" data-anchor-id="os-meses-mais-recentes">Os meses mais recentes</h2>
+<p>O prazo de dois anos demora a fechar. Para acompanhar os alertas recentes, o observatório mede também quanto foi embargado em até seis meses.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-94bcb813137dff7faf1e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-94bcb813137dff7faf1e">{"x":{"visdat":{"71a441893a4a":["function () ","plotlyVisDat"]},"cur_data":"71a441893a4a","attrs":{"71a441893a4a":{"x":{},"y":{},"marker":{"color":"#E8A33D"},"hovertext":{},"hoverinfo":"text","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":40,"r":10},"title":{"text":"Área dos alertas de corte raso por mês (mil ha)","font":{"size":14},"x":0},"xaxis":{"domain":[0,1],"automargin":true,"title":""},"yaxis":{"domain":[0,1],"automargin":true,"title":"mil ha","rangemode":"tozero"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"x":["2023-11-01","2023-12-01","2024-01-01","2024-02-01","2024-03-01","2024-04-01","2024-05-01","2024-06-01","2024-07-01","2024-08-01","2024-09-01","2024-10-01","2024-11-01","2024-12-01","2025-01-01","2025-02-01","2025-03-01","2025-04-01","2025-05-01","2025-06-01","2025-07-01","2025-08-01","2025-09-01","2025-10-01","2025-11-01","2025-12-01","2026-01-01","2026-02-01","2026-03-01","2026-04-01","2026-05-01","2026-06-01","2026-07-01","2026-08-01","2026-09-01","2026-10-01"],"y":[20.223737966907834,17.533903637306633,11.813818083687053,22.381704232518533,16.162707422262674,16.952105140842754,48.847797771742407,44.723521569784388,66.472635818955595,51.278176079714235,57.160743852815912,53.551678420063219,17.985313798148269,7.5880781234021493,17.812750951763729,8.1491573124569907,13.843224701805346,26.970501028303371,95.032657863154085,45.577189435357901,53.016442954127861,31.449027419454808,32.337687479811933,22.7169371937748,19.720021147167795,11.665572654172697,13.038565520298244,9.5207655037298053,17.046040780544018,21.764837477976737,35.730294940356679,29.113275290910032,37.742219065237897,35.445667366176252,34.850658195610492,31.05300608804821],"marker":{"color":"#E8A33D","line":{"color":"rgba(31,119,180,1)"}},"hovertext":["2023-11: 20,2 mil ha","2023-12: 17,5 mil ha","2024-01: 11,8 mil ha","2024-02: 22,4 mil ha","2024-03: 16,2 mil ha","2024-04: 17,0 mil ha","2024-05: 48,8 mil ha","2024-06: 44,7 mil ha","2024-07: 66,5 mil ha","2024-08: 51,3 mil ha","2024-09: 57,2 mil ha","2024-10: 53,6 mil ha","2024-11: 18,0 mil ha","2024-12: 7,6 mil ha","2025-01: 17,8 mil ha","2025-02: 8,1 mil ha","2025-03: 13,8 mil ha","2025-04: 27,0 mil ha","2025-05: 95,0 mil ha","2025-06: 45,6 mil ha","2025-07: 53,0 mil ha","2025-08: 31,4 mil ha","2025-09: 32,3 mil ha","2025-10: 22,7 mil ha","2025-11: 19,7 mil ha","2025-12: 11,7 mil ha","2026-01: 13,0 mil ha","2026-02: 9,5 mil ha","2026-03: 17,0 mil ha","2026-04: 21,8 mil ha","2026-05: 35,7 mil ha","2026-06: 29,1 mil ha","2026-07: 37,7 mil ha","2026-08: 35,4 mil ha","2026-09: 34,9 mil ha","2026-10: 31,1 mil ha"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-6c327ed0e226d654a0ab" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6c327ed0e226d654a0ab">{"x":{"visdat":{"71a44f9b68c2":["function () ","plotlyVisDat"]},"cur_data":"71a44f9b68c2","attrs":{"71a44f9b68c2":{"x":{},"y":{},"mode":"lines+markers","line":{"color":"#1F7A4A","width":2},"marker":{"color":"#1F7A4A","size":8},"hovertext":{},"hoverinfo":"text","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":40,"r":10},"title":{"text":"% da área dos alertas do mês embargada pelo Ibama em até 6 meses","font":{"size":14},"x":0},"xaxis":{"domain":[0,1],"automargin":true,"title":""},"yaxis":{"domain":[0,1],"automargin":true,"title":"","rangemode":"tozero","ticksuffix":"%"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"x":["2023-01-01","2023-02-01","2023-03-01","2023-04-01","2023-05-01","2023-06-01","2023-07-01","2023-08-01","2023-09-01","2023-10-01","2023-11-01","2023-12-01","2024-01-01","2024-02-01","2024-03-01","2024-04-01","2024-05-01","2024-06-01","2024-07-01","2024-08-01","2024-09-01","2024-10-01","2024-11-01","2024-12-01","2025-01-01","2025-02-01","2025-03-01","2025-04-01","2025-05-01","2025-06-01","2025-07-01","2025-08-01","2025-09-01","2025-10-01","2025-11-01","2025-12-01"],"y":[4.8149487957083092,7.6287783972541243,16.419060346190058,22.605566088011184,10.024496996497861,10.701303021737385,6.3332411460661771,5.9368144575340098,2.8991401909343542,3.1233997475220372,1.7243329701713568,2.4783199999865166,4.9023951527478493,1.9088810484329912,5.5438680570314922,6.3639894764189329,3.6570087599763772,7.2578654196286161,4.4189295365224091,4.4182664280764889,3.2199439996857953,3.1349969298210851,6.4764434636123607,3.7354421122903849,9.9536101982490077,22.944709252675828,18.718459827522199,36.129655032444283,9.6113065398812605,11.08639898023387,12.828678149472161,7.158705985082789,4.6499593269874833,9.3645188763546585,4.1623796910797424,7.6054243810411828],"mode":"lines+markers","line":{"color":"#1F7A4A","width":2},"marker":{"color":"#1F7A4A","size":8,"line":{"color":"rgba(31,119,180,1)"}},"hovertext":["Alertas de 2023-01: 4,8% embargados em até 6 meses","Alertas de 2023-02: 7,6% embargados em até 6 meses","Alertas de 2023-03: 16,4% embargados em até 6 meses","Alertas de 2023-04: 22,6% embargados em até 6 meses","Alertas de 2023-05: 10,0% embargados em até 6 meses","Alertas de 2023-06: 10,7% embargados em até 6 meses","Alertas de 2023-07: 6,3% embargados em até 6 meses","Alertas de 2023-08: 5,9% embargados em até 6 meses","Alertas de 2023-09: 2,9% embargados em até 6 meses","Alertas de 2023-10: 3,1% embargados em até 6 meses","Alertas de 2023-11: 1,7% embargados em até 6 meses","Alertas de 2023-12: 2,5% embargados em até 6 meses","Alertas de 2024-01: 4,9% embargados em até 6 meses","Alertas de 2024-02: 1,9% embargados em até 6 meses","Alertas de 2024-03: 5,5% embargados em até 6 meses","Alertas de 2024-04: 6,4% embargados em até 6 meses","Alertas de 2024-05: 3,7% embargados em até 6 meses","Alertas de 2024-06: 7,3% embargados em até 6 meses","Alertas de 2024-07: 4,4% embargados em até 6 meses","Alertas de 2024-08: 4,4% embargados em até 6 meses","Alertas de 2024-09: 3,2% embargados em até 6 meses","Alertas de 2024-10: 3,1% embargados em até 6 meses","Alertas de 2024-11: 6,5% embargados em até 6 meses","Alertas de 2024-12: 3,7% embargados em até 6 meses","Alertas de 2025-01: 10,0% embargados em até 6 meses","Alertas de 2025-02: 22,9% embargados em até 6 meses","Alertas de 2025-03: 18,7% embargados em até 6 meses","Alertas de 2025-04: 36,1% embargados em até 6 meses","Alertas de 2025-05: 9,6% embargados em até 6 meses","Alertas de 2025-06: 11,1% embargados em até 6 meses","Alertas de 2025-07: 12,8% embargados em até 6 meses","Alertas de 2025-08: 7,2% embargados em até 6 meses","Alertas de 2025-09: 4,6% embargados em até 6 meses","Alertas de 2025-10: 9,4% embargados em até 6 meses","Alertas de 2025-11: 4,2% embargados em até 6 meses","Alertas de 2025-12: 7,6% embargados em até 6 meses"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"scatter","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>O último ponto é dezembro 2025, o mês mais recente com seis meses de prazo encerrados e registrados nas bases públicas.</p>
+</section>
+<section id="por-estado" class="level2">
+<h2 class="anchored" data-anchor-id="por-estado">Por estado</h2>
+<p>Ibama, em até dois anos, % da área dos alertas de corte raso. A tabela está em ordem alfabética. <strong>Ela não serve para ordenar os estados:</strong> em alguns deles, os órgãos estaduais embargam mais que o Ibama. No Mato Grosso, por exemplo, o estado usa o auto de infração no lugar do embargo fora de áreas de preservação. A página de <a href="./metodologia.html">metodologia</a> explica as fontes estaduais.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="csnerhqpfb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#csnerhqpfb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#csnerhqpfb thead, #csnerhqpfb tbody, #csnerhqpfb tfoot, #csnerhqpfb tr, #csnerhqpfb td, #csnerhqpfb th {
+  border-style: none;
+}
+
+#csnerhqpfb p {
+  margin: 0;
+  padding: 0;
+}
+
+#csnerhqpfb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#csnerhqpfb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#csnerhqpfb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#csnerhqpfb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#csnerhqpfb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#csnerhqpfb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#csnerhqpfb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#csnerhqpfb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#csnerhqpfb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#csnerhqpfb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#csnerhqpfb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#csnerhqpfb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#csnerhqpfb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#csnerhqpfb .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#csnerhqpfb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#csnerhqpfb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#csnerhqpfb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#csnerhqpfb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#csnerhqpfb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#csnerhqpfb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#csnerhqpfb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#csnerhqpfb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#csnerhqpfb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#csnerhqpfb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#csnerhqpfb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#csnerhqpfb .gt_left {
+  text-align: left;
+}
+
+#csnerhqpfb .gt_center {
+  text-align: center;
+}
+
+#csnerhqpfb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#csnerhqpfb .gt_font_normal {
+  font-weight: normal;
+}
+
+#csnerhqpfb .gt_font_bold {
+  font-weight: bold;
+}
+
+#csnerhqpfb .gt_font_italic {
+  font-style: italic;
+}
+
+#csnerhqpfb .gt_super {
+  font-size: 65%;
+}
+
+#csnerhqpfb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#csnerhqpfb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#csnerhqpfb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#csnerhqpfb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#csnerhqpfb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#csnerhqpfb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#csnerhqpfb .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#csnerhqpfb .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#csnerhqpfb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="uf" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">UF</th>
+<th id="a2017" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2017</th>
+<th id="a2018" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2018</th>
+<th id="a2019" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2019</th>
+<th id="a2020" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2020</th>
+<th id="a2021" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2021</th>
+<th id="a2022" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2022</th>
+<th id="a2023" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2023</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="uf">AC</td>
+<td class="gt_row gt_right" headers="2017">4,4</td>
+<td class="gt_row gt_right" headers="2018">4,9</td>
+<td class="gt_row gt_right" headers="2019">3,5</td>
+<td class="gt_row gt_right" headers="2020">3,9</td>
+<td class="gt_row gt_right" headers="2021">11,0</td>
+<td class="gt_row gt_right" headers="2022">15,5</td>
+<td class="gt_row gt_right" headers="2023">15,8</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="uf">AM</td>
+<td class="gt_row gt_right" headers="2017">42,9</td>
+<td class="gt_row gt_right" headers="2018">28,7</td>
+<td class="gt_row gt_right" headers="2019">28,5</td>
+<td class="gt_row gt_right" headers="2020">22,6</td>
+<td class="gt_row gt_right" headers="2021">43,0</td>
+<td class="gt_row gt_right" headers="2022">51,0</td>
+<td class="gt_row gt_right" headers="2023">31,8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="uf">AP †</td>
+<td class="gt_row gt_right" headers="2017">1,5</td>
+<td class="gt_row gt_right" headers="2018">4,2</td>
+<td class="gt_row gt_right" headers="2019">2,5</td>
+<td class="gt_row gt_right" headers="2020">10,8</td>
+<td class="gt_row gt_right" headers="2021">26,5</td>
+<td class="gt_row gt_right" headers="2022">58,0</td>
+<td class="gt_row gt_right" headers="2023">1,1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="uf">MA</td>
+<td class="gt_row gt_right" headers="2017">8,5</td>
+<td class="gt_row gt_right" headers="2018">6,6</td>
+<td class="gt_row gt_right" headers="2019">1,2</td>
+<td class="gt_row gt_right" headers="2020">6,4</td>
+<td class="gt_row gt_right" headers="2021">0,3</td>
+<td class="gt_row gt_right" headers="2022">9,6</td>
+<td class="gt_row gt_right" headers="2023">11,1</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="uf">MT</td>
+<td class="gt_row gt_right" headers="2017">17,4</td>
+<td class="gt_row gt_right" headers="2018">19,7</td>
+<td class="gt_row gt_right" headers="2019">10,6</td>
+<td class="gt_row gt_right" headers="2020">5,6</td>
+<td class="gt_row gt_right" headers="2021">8,9</td>
+<td class="gt_row gt_right" headers="2022">8,5</td>
+<td class="gt_row gt_right" headers="2023">9,4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="uf">PA</td>
+<td class="gt_row gt_right" headers="2017">12,8</td>
+<td class="gt_row gt_right" headers="2018">20,6</td>
+<td class="gt_row gt_right" headers="2019">15,0</td>
+<td class="gt_row gt_right" headers="2020">22,0</td>
+<td class="gt_row gt_right" headers="2021">26,8</td>
+<td class="gt_row gt_right" headers="2022">29,2</td>
+<td class="gt_row gt_right" headers="2023">14,6</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="uf">RO</td>
+<td class="gt_row gt_right" headers="2017">8,6</td>
+<td class="gt_row gt_right" headers="2018">9,8</td>
+<td class="gt_row gt_right" headers="2019">8,0</td>
+<td class="gt_row gt_right" headers="2020">7,6</td>
+<td class="gt_row gt_right" headers="2021">16,4</td>
+<td class="gt_row gt_right" headers="2022">29,8</td>
+<td class="gt_row gt_right" headers="2023">25,5</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="uf">RR</td>
+<td class="gt_row gt_right" headers="2017">3,5</td>
+<td class="gt_row gt_right" headers="2018">3,8</td>
+<td class="gt_row gt_right" headers="2019">5,2</td>
+<td class="gt_row gt_right" headers="2020">4,3</td>
+<td class="gt_row gt_right" headers="2021">14,0</td>
+<td class="gt_row gt_right" headers="2022">18,3</td>
+<td class="gt_row gt_right" headers="2023">16,3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="uf">TO †</td>
+<td class="gt_row gt_right" headers="2017">0,5</td>
+<td class="gt_row gt_right" headers="2018">0,0</td>
+<td class="gt_row gt_right" headers="2019">0,0</td>
+<td class="gt_row gt_right" headers="2020">0,0</td>
+<td class="gt_row gt_right" headers="2021">0,5</td>
+<td class="gt_row gt_right" headers="2022">0,0</td>
+<td class="gt_row gt_right" headers="2023">0,0</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="8" class="gt_sourcenote">† Base pequena na maior parte dos anos (menos de 50 alertas ou de 1 mil ha). Fonte: Inpe (Deter) e Ibama; cálculo do observatório.</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="garimpo" class="level2">
+<h2 class="anchored" data-anchor-id="garimpo">Garimpo</h2>
+<p>Nos alertas de mineração do Deter, categoria que inclui o garimpo, a resposta do Ibama em até dois anos ficou entre 0,0% e 5,0% da área de 2016 a 2023. O valor mais alto, de 2023, vem quase todo de um único embargo sobre o garimpo na Terra Indígena Yanomami, em Roraima.</p>
+</section>
+<section id="um-exemplo-de-floresta-a-pasto-embargado" class="level2">
+<h2 class="anchored" data-anchor-id="um-exemplo-de-floresta-a-pasto-embargado">Um exemplo: de floresta a pasto embargado</h2>
+<p><img src="images/caso_mapas.png" class="img-fluid" alt="Mapas de uma área em Novo Progresso (PA): floresta em 2018 e 2019, pasto em 2022 e 2024, com o contorno dos alertas e do embargo."></p>
+<div class="notas-rodape">
+<p>Linha preta grossa: um dos alertas, de 30/03/2020. Linhas finas: os outros alertas do Deter dentro do embargo. Tracejado branco: embargo do Ibama de 24/06/2020. Fontes: Inpe (Deter, TerraClass), Ibama (termos de embargo), Sentinel-2 cloudless 2019 e 2024, de EOX IT Services GmbH (contém dados Copernicus Sentinel modificados).</p>
+</div>
+<div class="caso-passos">
+<ol type="1">
+<li><strong>Antes.</strong> Em 2018, a área do retângulo, em Novo Progresso (PA), era floresta (99,7%, segundo o TerraClass).</li>
+<li><strong>O alerta.</strong> Entre fevereiro e março de 2020, o Deter emitiu 13 alertas de corte raso ali, somando cerca de 1,7 mil hectares.</li>
+<li><strong>O embargo.</strong> Em junho de 2020, o Ibama embargou 1.793 hectares, cobrindo todos os alertas, 86 dias depois do último.</li>
+<li><strong>Depois.</strong> Em 2022 e em 2024, 99,8% da área embargada era pasto. O embargo continua em vigor na lista do Ibama.</li>
+<li><strong>A multa.</strong> O Ibama não publica se as multas foram pagas. O observatório pediu esse dado pela Lei de Acesso à Informação.</li>
+</ol>
+</div>
+<p>O caso foi escolhido por uma regra fixa, antes de olhar o mapa: um alerta típico em tamanho e no prazo até o embargo. O embargo, de quase 1,8 mil hectares, é bem maior que a média. O exemplo ilustra o caminho, e os números do observatório vêm de todos os alertas.</p>
+<div class="notas-rodape">
+<p><strong>Como ler.</strong> O observatório cruza no mapa os alertas de desmatamento do Inpe (Deter) com os polígonos de embargo do Ibama, do ICMBio e de cinco estados. Não afirma causa: mostra o que dizem os registros oficiais. Um alerta sem embargo pode ter recebido outra sanção, ou um embargo que não está nas listas públicas. Detalhes em <a href="./metodologia.html">Metodologia e dados</a>.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/marcofaga\.github\.io\/embargometro\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Embargômetro · uma iniciativa <a href="https://github.com/MAF-dataScience/"><img src="images/logo-small.png" alt="MAF dataScience" style="height:22px;vertical-align:middle;margin:0 2px 2px 4px"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Dados: INPE (Deter, TerraClass), Ibama, ICMBio e órgãos ambientais estaduais</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

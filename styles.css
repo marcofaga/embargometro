@@ -1,0 +1,140 @@
+/* Do alerta ao embargo — identidade visual (base: CSS do Apagão-SP). Verde e laranja vêm da paleta validada da figura do caso (floresta e pasto).
+   Cor primária (#e66101) reaproveitada do colorBrewer já usado nos gráficos
+   exploratórios do pipeline (ver scripts/03_montar_base_sampa.R). */
+
+:root {
+  --obs-verde: #1F7A4A;
+  --obs-laranja: #E8A33D;
+  --obs-cinza-escuro: #2b2b2b;
+}
+
+.navbar {
+  border-bottom: 3px solid var(--obs-verde);
+}
+
+.navbar-title {
+  font-weight: 700;
+  color: var(--obs-verde) !important;
+}
+
+h1.title, h1, h2 {
+  color: var(--obs-cinza-escuro);
+}
+
+h1.pagina-titulo {
+  text-align: center;
+}
+
+h3.pagina-subtitulo {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555;
+}
+
+.status-aneel {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #666;
+  margin: 0.8rem auto 1.2rem auto;
+  max-width: 640px;
+  line-height: 1.45;
+}
+
+h4.manchete {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--obs-cinza-escuro);
+  margin: 1.4rem 0 0.6rem 0;
+}
+
+.notas-rodape {
+  background: #f5f5f3;
+  border-left: 4px solid #a3a29c;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  margin: 1rem 0 1.8rem 0;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.notas-rodape p {
+  margin: 0.3rem 0;
+}
+
+.notas-rodape sup {
+  font-weight: 700;
+  margin-right: 0.15rem;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.kpi-card {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.kpi-card .kpi-valor {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--obs-cinza-escuro);
+  line-height: 1.1;
+}
+
+.kpi-card .kpi-rotulo {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.kpi-card .kpi-variacao {
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.legenda-grafico {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.kpi-variacao.alta { color: #c0392b; }
+.kpi-variacao.baixa { color: #1e8449; }
+.kpi-variacao.neutra { color: #888; }
+
+.kpi-indice {
+  background: #fff4e8;
+  border: 1px solid var(--obs-laranja);
+  border-left: 6px solid var(--obs-verde);
+  margin-top: 1.2rem;
+}
+
+.kpi-indice .kpi-valor {
+  font-size: 3rem;
+  color: var(--obs-verde);
+}
+
+.kpi-indice .kpi-rotulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--obs-cinza-escuro);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.caso-passos ol { padding-left: 1.2rem; }
+.caso-passos li { margin-bottom: 0.5rem; }
+.aviso-prototipo {
+  background: #fff7e6; border-left: 4px solid var(--obs-laranja); padding: 0.6rem 1rem;
+  font-size: 0.85rem; color: #5a4a2a; margin: 0.5rem 0 1.2rem 0; border-radius: 4px;
+}

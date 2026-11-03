@@ -4,3 +4,6 @@ _site/
 site_libs/
 *_files/
 *.knit.md
+
+/.quarto/
+**/*.quarto_ipynb

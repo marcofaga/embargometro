@@ -2,7 +2,7 @@
 
 Observatório da resposta do poder público ao desmatamento na Amazônia Legal. Cruza no mapa os alertas de desmatamento do Inpe (Deter) com os embargos do Ibama, do ICMBio e de órgãos ambientais estaduais, e mede quanto da área desmatada recebe embargo, em quanto tempo e onde.
 
-Site: https://maf-datascience.github.io/embargometro/
+Site: https://marcofaga.github.io/embargometro/
 
 Uma iniciativa da [MAF dataScience](https://github.com/MAF-dataScience/).
 

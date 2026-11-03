@@ -7,11 +7,11 @@ project:
 website:
   title: "Embargômetro"
   description: "Observatório da resposta do poder público ao desmatamento na Amazônia Legal: do alerta do satélite ao embargo, município a município."
-  site-url: "https://maf-datascience.github.io/embargometro/"
+  site-url: "https://marcofaga.github.io/embargometro/"
   image: "images/maf-icone.png"
   open-graph: true
   twitter-card: true
-  repo-url: "https://github.com/MAF-dataScience/embargometro"
+  repo-url: "https://github.com/marcofaga/embargometro"
   navbar:
     background: light
     logo: false

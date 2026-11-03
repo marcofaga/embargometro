@@ -87,7 +87,7 @@ plot_ly(d, x = ~data, y = ~ib182, type = "scatter", mode = "lines+markers", line
   config(displayModeBar = FALSE)
 ```
 
-O último ponto é `r mes_pt(MES_6M$data)`, o mês mais recente com seis meses de prazo encerrados e registrados nas bases públicas.
+O último ponto é `r mes_pt(MES_6M$data)`, o mês mais recente com seis meses de prazo encerrados. Os pontos recentes tendem a subir nas próximas edições: o Ibama costuma cadastrar ou corrigir o desenho dos embargos meses ou anos depois (ver [metodologia](metodologia.qmd)).
 
 ## Por estado
 

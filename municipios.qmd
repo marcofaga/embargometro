@@ -1,0 +1,34 @@
+---
+title: "Municípios"
+description: "Área dos alertas de desmatamento e % embargada pelo Ibama, por município da Amazônia Legal."
+---
+
+```{r}
+source("R/dados.R")
+library(reactable)
+d <- MUN[, .(UF = uf, `Município` = municipio, area = area_ha / 1e3, ib730, tod = fifelse(abs(tod730_max - tod730_min) < 0.05, br(tod730_min), paste0(br(tod730_min), "–", br(tod730_max))),
+             area12 = area_12m / 1e3, base_pequena)]
+fwrite(MUN[, .(uf, mun_geocod, municipio, alertas_2019_2023 = alertas, area_alertas_ha_2019_2023 = round(area_ha, 1),
+               pct_ibama_2anos = round(ib730, 1), pct_todas_fontes_2anos_min = round(tod730_min, 1), pct_todas_fontes_2anos_max = round(tod730_max, 1),
+               area_alertas_ha_ultimos_12_meses = round(area_12m, 1), base_pequena)], "dados/municipios.csv")
+```
+
+Alertas de corte raso de 2019 a `r ANO_FECHADO` somados, por município. **% Ibama em 2 anos** é a parte da área dos alertas com embargo do Ibama registrado em até dois anos. **% todas as fontes** inclui o ICMBio e o órgão estadual, nos anos que cada lista cobre. No Pará, sai como faixa porque a lista estadual tem só o ano do embargo. Municípios com menos de 1 mil hectares de alertas no período aparecem em cinza: a porcentagem oscila muito.
+
+```{r}
+num <- function(d = 1) function(v) if (is.na(v)) "" else br(v, d)
+reactable(d[, -"base_pequena"], searchable = TRUE, defaultPageSize = 20, highlight = TRUE, compact = TRUE,
+  language = reactableLang(searchPlaceholder = "Buscar município ou UF", pageInfo = "{rowStart}–{rowEnd} de {rows}",
+                           pagePrevious = "anterior", pageNext = "próxima", noData = "Nenhum município encontrado"),
+  rowStyle = function(i) if (d$base_pequena[i]) list(color = "#9a9a9a"),
+  defaultSorted = list(area = "desc"),
+  columns = list(
+    UF = colDef(width = 55),
+    `Município` = colDef(minWidth = 160),
+    area = colDef(name = "Alertas 2019-2023 (mil ha)", cell = num(1), defaultSortOrder = "desc"),
+    ib730 = colDef(name = "% Ibama em 2 anos", cell = num(1), defaultSortOrder = "desc"),
+    tod = colDef(name = "% todas as fontes em 2 anos", sortable = FALSE),
+    area12 = colDef(name = "Alertas nos últimos 12 meses (mil ha)", cell = num(1), defaultSortOrder = "desc")))
+```
+
+Baixe a tabela: [municipios.csv](dados/municipios.csv). Fonte: Inpe (Deter), Ibama, ICMBio e órgãos estaduais; cálculo do observatório.

@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - dados/*.csv
+
+website:
+  title: "Embargômetro"
+  description: "Observatório da resposta do poder público ao desmatamento na Amazônia Legal: do alerta do satélite ao embargo, município a município."
+  site-url: "https://maf-datascience.github.io/embargometro/"
+  image: "images/maf-icone.png"
+  open-graph: true
+  twitter-card: true
+  repo-url: "https://github.com/MAF-dataScience/embargometro"
+  navbar:
+    background: light
+    logo: false
+    left:
+      - href: index.qmd
+        text: "Edição do mês"
+      - href: municipios.qmd
+        text: "Municípios"
+      - href: metodologia.qmd
+        text: "Metodologia e dados"
+      - href: edicoes.qmd
+        text: "Edições anteriores"
+    right:
+      - icon: envelope
+        href: mailto:mafdatascience@gmail.com
+        aria-label: Contato
+  page-footer:
+    left: "Embargômetro · uma iniciativa <a href=\"https://github.com/MAF-dataScience/\"><img src=\"images/logo-small.png\" alt=\"MAF dataScience\" style=\"height:22px;vertical-align:middle;margin:0 2px 2px 4px\"></a>"
+    right: "Dados: INPE (Deter, TerraClass), Ibama, ICMBio e órgãos ambientais estaduais"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    grid:
+      body-width: 900px
+    lang: pt-BR
+    fig-align: center
+    include-in-header:
+      - noindex.html
+      - analytics.html
+
+execute:
+  echo: false
+  message: false
+  warning: false

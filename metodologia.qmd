@@ -1,0 +1,22 @@
+---
+title: ""
+pagetitle: "Metodologia e dados · Embargômetro"
+---
+
+```{r}
+source("R/dados.R")
+fwrite(AMZ[ano <= ANO_FECHADO, .(ano, alertas, area_alertas_ha = round(area_ha, 1), pct_ibama_2anos = round(ib730, 1),
+                                 pct_ibama_1ano = round(ib365, 1), pct_ibama_6meses = round(ib182, 1), pct_em_area_ja_embargada = round(ja_emb30, 1))],
+       "dados/amazonia_por_ano.csv")
+fwrite(MES[, .(mes, area_alertas_ha = round(area_ha, 1), pct_ibama_6meses = round(ib182, 1), pct_ibama_1ano = round(ib365, 1))], "dados/amazonia_por_mes.csv")
+```
+
+## Dados para baixar
+
+- [amazonia_por_ano.csv](dados/amazonia_por_ano.csv): série anual da Amazônia Legal (corte raso).
+- [amazonia_por_mes.csv](dados/amazonia_por_mes.csv): série mensal; as porcentagens ficam em branco enquanto o prazo não fecha.
+- [municipios.csv](dados/municipios.csv): tabela por município.
+
+As tabelas trazem só números agregados. O observatório não publica nome, CPF, CNPJ ou número de processo, embora as listas públicas de embargo tragam esses dados.
+
+{{< include ../metodologia/nota_metodologica.md >}}

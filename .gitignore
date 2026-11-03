@@ -1,0 +1,6 @@
+# saída renderizada: publicada na branch gh-pages
+_site/
+.quarto/
+site_libs/
+*_files/
+*.knit.md
